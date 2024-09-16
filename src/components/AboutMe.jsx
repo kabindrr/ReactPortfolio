@@ -1,10 +1,10 @@
 import aboutMeProfile from "../assets/AboutMe.png";
+import { Title } from "./Title";
 export const AboutMe = () => {
   return (
     <>
       <section id="aboutMe">
-        <h2 className="title">About Me</h2>
-        <hr />
+        <Title title="AboutMe" />
         <div className="aboutMe container">
           <div className="left container">
             <img src={aboutMeProfile} alt="" />

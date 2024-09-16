@@ -4,6 +4,7 @@ import project3 from "../assets/project3.png";
 import project4 from "../assets/project4.png";
 import project5 from "../assets/project5.png";
 import project6 from "../assets/project6.png";
+import { Title } from "./Title";
 
 export const Projects = () => {
   return (
@@ -11,8 +12,7 @@ export const Projects = () => {
       {" "}
       <section id="projects">
         <div className="projects ">
-          <h2 className="title">Projects</h2>
-          <hr />
+          <Title title="Projects" />
           <div className="project-container container">
             <div className="project-card container">
               <div className="top">

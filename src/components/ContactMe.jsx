@@ -1,9 +1,10 @@
+import { Title } from "./Title";
+
 export const ContactMe = () => {
   return (
     <>
       <section className="contact-me" id="contact-me">
-        <h2 className="title">Get In Touch</h2>
-        <hr />
+        <Title title="Get In Touch" />
         <div className="contact container">
           <div className="social-icons flex-center">
             <a
