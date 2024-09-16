@@ -270,6 +270,7 @@ body {
   margin-top: 3rem;
   margin-bottom: 3rem;
   color: var(--color-white);
+  overflow: hidden;
 }
 
 .skills-container-frontend > div {
@@ -299,6 +300,7 @@ body {
   margin-top: 3rem;
   margin-bottom: 3rem;
   color: var(--color-white);
+  overflow: hidden;
 }
 
 .skills-container-backend > div {
