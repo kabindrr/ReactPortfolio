@@ -4,9 +4,54 @@ import project3 from "../assets/project3.png";
 import project4 from "../assets/project4.png";
 import project5 from "../assets/project5.png";
 import project6 from "../assets/project6.png";
+import { Card } from "./Card";
 import { Title } from "./Title";
 
 export const Projects = () => {
+  const projects = [
+    {
+      title: "Movie World",
+      image: project2,
+      github: "https://github.com/kabindrr/React-Movie_World.git",
+      url: "https://react-movie-world-9sne.vercel.app",
+      description: "TechStack: Html, Css, Figma,JavaScript",
+    },
+    {
+      title: "Bucket List",
+      image: project4,
+      github: "https://github.com/kabindrr/BucketList.git",
+      url: "https://bucket-list-sandy.vercel.app",
+      description: "TechStack: Html, Css, Figma, Bootstrap",
+    },
+    {
+      title: "Solar System",
+      image: { project5 },
+      github: "https://github.com/kabindrr/SolarSystem.git",
+      url: "https://solar-system-topaz.vercel.app",
+      description: "TechStack: Html, Css, Figma",
+    },
+    {
+      title: "Solar System",
+      image: { project5 },
+      github: "https://github.com/kabindrr/SolarSystem.git",
+      url: "https://solar-system-topaz.vercel.app",
+      description: "TechStack: Html, Css, Figma",
+    },
+    {
+      title: "Solar System",
+      image: { project5 },
+      github: "https://github.com/kabindrr/SolarSystem.git",
+      url: "https://solar-system-topaz.vercel.app",
+      description: "TechStack: Html, Css, Figma",
+    },
+    {
+      title: "Solar System",
+      image: { project5 },
+      github: "https://github.com/kabindrr/SolarSystem.git",
+      url: "https://solar-system-topaz.vercel.app",
+      description: "TechStack: Html, Css, Figma",
+    },
+  ];
   return (
     <>
       {" "}
@@ -14,30 +59,9 @@ export const Projects = () => {
         <div className="projects ">
           <Title title="Projects" />
           <div className="project-container container">
-            <div className="project-card container">
-              <div className="top">
-                <img src={project2} alt="" />
-              </div>
-              <div className=" flex bottom container">
-                <div className="links">
-                  <a href="https://github.com/kabindrr/React-Movie_World.git">
-                    <i
-                      className="fa-brands fa-github"
-                      style={{ color: "gray" }}
-                    ></i>
-                  </a>
-
-                  <a href="https://react-movie-world-9sne.vercel.app/">
-                    <i
-                      className="fa-brands fa-chrome"
-                      style={{ color: "yellow" }}
-                    ></i>
-                  </a>
-                </div>
-                <h3>Movie World</h3>
-                <p>TechStack: Html, Css, Figma, JavaScript</p>
-              </div>
-            </div>
+            {projects.map((item, i) => (
+              <Card key={i} {...item} />
+            ))}
             <div className="project-card container">
               <div className="top">
                 <img src={project4} alt="" width="100%" />
@@ -134,30 +158,13 @@ export const Projects = () => {
                 <p>TechStack: Html, Css, Figma, JavaScript</p>
               </div>
             </div>
-            <div className="project-card container">
-              <div className="top">
-                <img src={project5} alt="" width="100%" />
-              </div>
-              <div className=" flex bottom container">
-                <div className="links">
-                  <a href="https://github.com/kabindrr/SolarSystem.git">
-                    <i
-                      className="fa-brands fa-github"
-                      style={{ color: "gray" }}
-                    ></i>
-                  </a>
-
-                  <a href="https://solar-system-topaz.vercel.app/">
-                    <i
-                      className="fa-brands fa-chrome"
-                      style={{ color: "yellow" }}
-                    ></i>
-                  </a>
-                </div>
-                <h3>Solar System</h3>
-                <p>TechStack: Html, Css, Figma</p>
-              </div>
-            </div>
+            <Card
+              title="Solar System"
+              image={project5}
+              github="https://github.com/kabindrr/SolarSystem.git"
+              url="https://solar-system-topaz.vercel.app"
+              description="TechStack: Html, Css, Figma"
+            />
           </div>
         </div>
       </section>
