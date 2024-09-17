@@ -1,7 +1,7 @@
 :root {
   --color-dark: #000000;
   --color-white: #ffffff;
-  --primary-color: #1e272cc9;
+  --primary-color: #1e272ce3;
   --secondary-color: var(rgba(89, 124, 89, 0.856));
   --body-bg: var(rgba(228, 15, 228, 0.842));
   --hover-color: var(rgba(190, 10, 25, 0.653));

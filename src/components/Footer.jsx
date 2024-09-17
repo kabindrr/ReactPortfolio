@@ -1,4 +1,18 @@
+import { useEffect, useState } from "react";
+
 export const Footer = () => {
+  const [scrollYPosition, setScrollYPosition] = useState(0);
+
+  const handleOnScrollY = () => {
+    setScrollYPosition(window.scrollY);
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleOnScrollY);
+    return () => {
+      window.removeEventListener("scroll", handleOnScrollY);
+    };
+  }, []);
+
   return (
     <>
       <section id="footer">
@@ -7,10 +21,11 @@ export const Footer = () => {
             &copy; Copy right all reserved 2024
           </div>
         </footer>
-
-        <a href="#hero" className="goUp">
-          <i className="fa-solid fa-angle-up"></i>
-        </a>
+        {scrollY > 800 && (
+          <a href="#hero" className="goUp">
+            <i className="fa-solid fa-angle-up"></i>
+          </a>
+        )}
       </section>
     </>
   );
