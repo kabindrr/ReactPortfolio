@@ -10,9 +10,7 @@ import { NavBar } from "./components/NavBar";
 import { Projects } from "./components/Projects";
 import { Skills } from "./components/Skills";
 
-
 const App = () => {
-  
   return (
     <>
       <input type="checkbox" id="darkmode" />
@@ -42,7 +40,7 @@ const App = () => {
         <ContactMe />
 
         {/* <!-- footer --> */}
-        <Footer  />
+        <Footer />
       </div>
     </>
   );

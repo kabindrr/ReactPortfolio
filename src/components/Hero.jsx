@@ -1,6 +1,23 @@
+import { useEffect, useState } from "react";
 import profile from "../assets/profile.png";
 
 export const Hero = () => {
+  const [index, setIndex] = useState(0);
+
+  const titles = [
+    "Full Stack Software Engineer",
+    "Full Stack Software Developer",
+    "Front End Developer",
+    "Back End Developer",
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % titles.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
       <section id="hero">
@@ -10,7 +27,7 @@ export const Hero = () => {
               Hi I`m{" "}
               <span className="roboto-black-italic">Kabindra Ranabhat,</span>
               <div>
-                <h2>Full Stack Software Engineer</h2>
+                <h2 className="animated-title">{titles[index]}</h2>
               </div>
               <p>
                 {" "}
