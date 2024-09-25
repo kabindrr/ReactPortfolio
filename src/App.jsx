@@ -9,6 +9,7 @@ import { Hero } from "./components/Hero";
 import { NavBar } from "./components/NavBar";
 import { Projects } from "./components/Projects";
 import { Skills } from "./components/Skills";
+import { Route, Routes } from "react-router-dom";
 
 const App = () => {
   return (
@@ -23,21 +24,14 @@ const App = () => {
         </label>
 
         {/* <!-- hero --> */}
-        <Hero />
-        {/* <!-- banner --> */}
-        <Banner />
 
-        {/* <!-- skills --> */}
-        <Skills />
-
-        {/* <!-- projects --> */}
-        <Projects />
-
-        {/* <!-- aboutMe --> */}
-        <AboutMe />
-
-        {/* <!-- contact me --> */}
-        <ContactMe />
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="skills" element={<Skills />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="about" element={<AboutMe />} />
+          <Route path="contact" element={<ContactMe />} />
+        </Routes>
 
         {/* <!-- footer --> */}
         <Footer />
